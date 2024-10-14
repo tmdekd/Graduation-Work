@@ -1,0 +1,110 @@
+{{>layout/header}}
+
+    <section>
+        {{#userPrincipal}}
+            <input type="hidden" value="{{userPrincipal.num}}">
+        {{/userPrincipal}}
+        <div id="movie_middleline">
+            <div class="movie_top">
+                <div id="novel_title_search">
+<!--                    <div class="novel_search">-->
+<!--                        <input type="text" id="novel_input_search" placeholder="검색어 입력">-->
+<!--                        <button type="submit" id="novel_div2_button">-->
+<!--                            <i class="fa-solid fa-magnifying-glass" id="novel_button_img"></i>-->
+<!--                        </button>-->
+<!--                    </div>-->
+                    <form action="/auth/search" method="get" id="id_div2_form">
+                        <input type="text" id="search" name="keyword" placeholder="검색어 입력" style="outline: none">
+                        <button type="button" id="div2_button">
+                            <i class="fa-solid fa-magnifying-glass" id="submit_icon"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="novel_mini_menubar_1">
+                <div class="novel_mini_menubar_2">
+                    <ul class="novel_mini">
+                        <li class="novel_mini_li"><a href="/auth/book/novel" class="novel_mini_li_a">소설</a></li>
+                        <li class="novel_mini_li"><a href="/auth/book/history_culture" class="novel_mini_li_a">역사/문화</a></li>
+                        <li class="novel_mini_li"><a href="/auth/book/personalDevelopment" class="novel_mini_li_a">자기계발</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="novel_one">
+                <div id="novel_page">
+                    <h1 id="novel_page_h1">소설</h1>
+                    <h2 id="novel_page_h2">서점에서 판매되고 있는 소설 도서입니다.</h2>
+                    <div class="novel_list_box">
+                        {{#novels}}
+                            <div class="novel_book_list">
+                                <input type = "hidden"  value = "{{num}}" class="book_num">
+                                <a href="#"><img src="{{img}}" class="novel_book_img"></a>
+                                <a href="#" class="book_1"><p class="novel_book_1">{{title}}</p></a>
+                                <p class="novel_book_2">{{author}} ㅣ {{publisher}}</p>
+                                <p class="novel_book_3">{{price}}원</p>
+
+                                <div class="novel_button_boxs">
+                                    <button type="submit" class="novel_heart"><i class="fa-regular fa-heart" style="color: #ff3d3d;"></i></button>
+                                </div>
+                            </div>
+                        {{/novels}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        $(document).ready(function(){
+            $('.novel_heart').click(function(){
+                console.log("heart click");
+                var userId = $("input[type=hidden]").val(); // hidden input에서 사용자 이름을 가져옵니다.
+                var bookInfo = $(this).closest('.novel_book_list'); // 현재 클릭된 heart button이 속한 도서 정보를 담는 요소를 선택합니다.
+                var bookId = bookInfo.find('.book_num').val(); // class="book_num"에서 도서 번호를 가져옵니다.
+                // 도서 정보를 객체로 구성합니다.
+                var bookData = {
+                    member: {num: userId}, // 사용자 이름
+                    book: {num: bookId}  // 도서 번호
+                };
+                console.log("memberNum = " + userId);
+                console.log("bookNum = " + bookId);
+                console.log("bookData = ", bookData);
+                $.ajax({
+                    url: '/tweetBook', // 요청을 보낼 서버의 URL 주소입니다.
+                    type: 'POST', // 데이터를 서버로 보내는 방법입니다.
+                    data: JSON.stringify(bookData), // 서버로 보낼 데이터입니다. 객체를 JSON 문자열로 변환합니다.
+                    contentType: 'application/json; charset=utf-8', // 보내는 데이터의 타입입니다.
+                    dataType: 'json', // 서버에서 보내주는 데이터의 타입입니다.
+                    success: function(response) {
+                        // 요청이 성공하면 실행되는 함수입니다.
+                        if(response.status === 200) {
+                            // alert("도서가 찜 목록에 추가되었습니다.");
+                            Swal.fire({
+                                title: "찜 목록 추가 성공",
+                                text: "도서가 찜 목록에 추가되었습니다.",
+                                icon: "success"
+                            });
+                        } else if(response.status === 400) {
+                            // alert("이미 찜 목록에 추가되었습니다.");
+                            Swal.fire({
+                                title: "찜 목록 추가 실패",
+                                text: "이미 찜 목록에 추가되었습니다.",
+                                icon: "error"
+                            });
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        // 요청이 실패하면 실행되는 함수입니다.
+                        // alert("오류 발생" + status + error);
+                        Swal.fire({
+                            title: "찜 목록 추가 실패",
+                            text: "로그인 후, 다시 시도해주세요.",
+                            icon: "error"
+                        });
+                    }
+
+                });
+            });
+        });
+    </script>
+{{>layout/footer}}

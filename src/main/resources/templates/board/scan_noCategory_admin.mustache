@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>반환 책장 / 관리자</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <style>
+        .body{
+            margin: 0;
+            padding: 0;
+        }
+
+
+        @font-face {
+            font-family: 'GmarketSansMedium';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @media(min-width:280px) {
+
+        }
+
+        .nanum-gothic-regular {
+            margin: 50px 0;
+            font-family: 'GmarketSansMedium', sans-serif;
+            font-weight: 300;
+            font-style: normal;
+            background-color: #FFC96F;
+        }
+
+        #center{
+            display: flex;
+            justify-content: center;
+        }
+
+        #background_box{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            width: 90%;
+            padding: 30px 0;
+        }
+
+        .background{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: white;
+            width: 50%;
+        }
+
+        .background_2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            height: 400px;
+            /* width: 90%; */
+        }
+
+        .class_title{
+            display: flex;
+            justify-content: center;
+        }
+
+        #title{
+            background-color: #F9EFDB;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 90%;
+            height: 100px;
+            margin: 0;
+            font-size: 45px;
+        }
+
+        .book{
+            width: 30vw;
+            /* height: 40vh; */
+        }
+
+        .book h1{
+            font-size: 40px;
+            font-weight: 200;
+            width: 100%;
+        }
+
+        .subtitle{
+            /* width: 90%; */
+            background-color: white;
+            margin: 0 auto;
+            padding: 20px 0;
+            /* display: table-cell;
+            vertical-align: center;
+            justify-content: center; */
+        }
+
+        .subtitle h1{
+            padding-right: 30px;
+            font-size: 40px;
+            margin-bottom: 30px;
+            font-weight: 200;
+        }
+
+        .button{
+            margin: 30px auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        #id_button{
+            background-color: #607274;
+            color: white;
+            font-size: 30px;
+            font-weight: 500;
+            height: 70px;
+            width: 200px;
+            border: none;
+            border-radius: 30px;
+        }
+
+        #container{
+            display: flex;
+            justify-content: center;
+        }
+
+        .background_book_box{
+            background-color: white;
+            width: 90%;
+        }
+
+        .book_recognition{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 450px;
+        }
+
+        .book_recognition_h1{
+            font-weight: 100;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body class="nanum-gothic-regular">
+    <div class="class_title">
+        <h1 id="title">반환책장 / 관리자</h1>
+    </div>
+    {{#book}}
+        <div id="center">
+            <div id="background_box">
+                <div class="background">
+                    <div class="background_2">
+                        <div class="book">
+                            <img src="{{book.img}}" alt="도서 이미지" style="width: 60%; height: auto;">
+                        </div>
+                    </div>
+                </div>
+                <div class="subtitle">
+                    <h1>도서 제목: {{book.title}}</h1>
+                    <h1>도서 저자: {{book.author}}</h1>
+                    <h1>책장 위치: {{book.location}}</h1>
+                </div>
+            </div>
+        </div>
+    {{/book}}
+    {{^book}}
+        <div id="container">
+            <div class="background_book_box">
+                <div class="background_book">
+                    <div class="book_recognition">
+                        <h1 class="book_recognition_h1">도서를 인식시켜 주세요.</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {{/book}}
+<!--    <div class="button">-->
+<!--        <button id="id_button">확인</button>-->
+<!--    </div>-->
+
+    <script src="/js/scan_noCategory.js"></script>
+    <script>
+        setTimeout(function() {
+            window.close();
+        }, 5000);
+    </script>
+</body>
+</html>

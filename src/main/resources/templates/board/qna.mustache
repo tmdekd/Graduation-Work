@@ -1,0 +1,40 @@
+{{>layout/header}}
+
+    <section id="qna_minheight">
+        <!-- 질문 검색 -->
+        <div id="qna_search">
+            <input type="search" id="qna_search_input">
+            <button type="button" id="qna_button">검색</button>
+        </div>
+        <div id="qna">
+            <h1 id="qna_id">Q&A</h1>
+        </div>
+        <!-- 중간 바 -->
+        <div id="middle_bar_box">
+            <div id="middle_bar">
+                <h1 class="middle_bar_h1" id="middle_bar_id">ID</h1>
+                <h1 class="middle_bar_h1" id="middle_bar_title">제목</h1>
+                <h1 class="middle_bar_h1" id="middle_bar_day">작성 날짜 및 시간</h1>
+                <h1 class="middle_bar_h1" id="middle_bar_writer">작성자</h1>
+            </div>
+        </div>
+        <!-- 질문작성목록 -->
+        <div id="list_box">
+            {{#questionList}}
+                <div id="list">
+                    <div class="list_id">{{id}}</div>
+                    <a href="/auth/qna_detail/{{id}}" class="list_title">{{title}}</a>
+                    <div class="list_day">{{createdDate}}</div>
+                    <div class="list_writer">{{member.name}}</div>
+                    <!--                    <h1>{{member.name}}</h1>-->
+                    <!--                    <div class="list_answer">미완료</div>-->
+                </div>
+            {{/questionList}}
+        </div>
+        <!-- 게시물 작성하기 버튼 -->
+        <div id="qna_question">
+            <button type="button" id="qna_post_button" onclick="location.href = '/qna_question'">게시글 작성</button>
+        </div>
+    </section>
+
+{{>layout/footer}}

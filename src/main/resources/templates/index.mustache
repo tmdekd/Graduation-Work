@@ -1,0 +1,104 @@
+{{>layout/header}}
+
+    <section>
+        <div class="middle">
+            <div id="id_div2">
+                <form action="/auth/search" id="id_div2_form">
+                    <input type="text" id="search" placeholder="검색어 입력" name="keyword" style="outline: none">
+                    <button type="submit" id="div2_button">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+
+                </form>
+            </div>
+        </div>
+        <!-- 베스트셀러 문구 -->
+        <main id="main">
+            <div id="main_h1_box">
+                <h1 id="main_h1">베스트셀러</h1>
+            </div>
+            <div id="main_h2_box">
+                <h2 id="main_h2">지난 한달 간 서점 내 인기도서 top5</h2>
+            </div>
+            <div id="wrapper">
+                <div id="slider-wrap">
+                    <ul id="slider">
+                        {{#bestSellers}}
+                            <li>
+                                <div>
+                                    <h3>{{index}}</h3>
+                                </div>
+                                <div>
+                                    <img src="{{book.img}}" alt="{{book.title}}">
+                                </div>
+                            </li>
+                        {{/bestSellers}}
+                    </ul>
+
+                    <!--controls-->
+                    <div class="btns" id="next"><i class="fa fa-arrow-right"></i></div>
+                    <div class="btns" id="previous"><i class="fa fa-arrow-left"></i></div>
+                    <div id="counter"></div>
+
+                    <div id="pagination-wrap">
+                        <ul>
+                        </ul>
+                    </div>
+                    <!--controls-->
+                </div>
+            </div>
+        </main>
+        <div id="total_book_list">
+            <div id="total_book_border">
+                <div id="id_div4">
+                    <div id="new">
+                        <h1 id="new_h1">전체 도서</h1>
+                        <h2 id="new_h2">서점에서 판매 중인 도서목록</h2>
+                    </div>
+                </div>
+                <div class="id_div5">
+                    <div class="book_list_novel">
+                        <a href="/auth/book/novel" class="novel_a">소설 바로가기</a>
+                        <a href="/auth/book/novel"><i class="fa-solid fa-chevron-right"></i></a>
+                    </div>
+                    <div class="novel_list_box">
+                        <div class="novel_list">
+                            {{#novels}}
+                                <a href="#"><img src="{{img}}" class="total_book_img"></a>
+                            {{/novels}}
+                        </div>
+                    </div>
+                </div>
+                <div class="id_div5">
+                    <div class="book_list_novel">
+                        <a href="/auth/book/history_culture" class="novel_a">역사/문화 바로가기</a>
+                        <a href="/auth/book/history_culture"><i class="fa-solid fa-chevron-right"></i></a>
+                    </div>
+                    <div class="novel_list_box">
+                        <div class="novel_list">
+                            {{#histories_cultures}}
+                                <a href="#"><img src="{{img}}" class="total_book_img"></a>
+                            {{/histories_cultures}}
+                        </div>
+                    </div>
+                </div>
+                <div class="id_div5">
+                    <div class="book_list_novel">
+                        <a href="/auth/book/personalDevelopment" class="novel_a">자기계발 바로가기</a>
+                        <a href="/auth/book/personalDevelopment"><i class="fa-solid fa-chevron-right"></i></a>
+                    </div>
+                    <div class="novel_list_box">
+                        <div class="novel_list">
+                            {{#personalDevelopment}}
+                                <a href="#"><img src="{{img}}" class="total_book_img"></a>
+                            {{/personalDevelopment}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="/js/bestSellers.js"></script>
+
+
+{{>layout/footer}}

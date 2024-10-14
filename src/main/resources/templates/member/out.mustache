@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>퇴장</title>
+
+    <link rel="stylesheet" href="/css/out.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+</head>
+<body class="nanum-gothic-regular">
+    <div class="background">
+        <h1 id="id_h1">알림</h1>
+        <div id="background_h2">
+            {{#message}}
+                <h2 class="id_h2">{{member.name}}님 {{message}}</h2>
+            {{/message}}
+            {{^message}}
+                <h2 class="id_h2">구매내역이 확인 되었습니다. {{member.name}}님 안녕히 가세요.</h2>
+            {{/message}}
+        </div>
+    </div>
+    <script>
+        setTimeout(function() {
+            window.close();
+        }, 5000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>퇴장</title>
+
+    <link rel="stylesheet" href="/css/theft_situation.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+</head>
+<body class="nanum-gothic-regular">
+    <div class="background">
+        <h1 id="id_h1">알림</h1>
+        <div id="background_h2">
+            <h2 class="id_h2">{{member.name}}님 <br>구매하지 않은 도서는 가지고 나갈 수 없습니다.</h2>
+        </div>
+    </div>
+    <script>
+        var isOriginalColor = true; // 배경색 상태를 추적하는 변수
+
+        setInterval(function() {
+            var body = document.body; // 배경색을 변경할 요소 선택
+            var backgroundDiv = document.querySelector('.background');
+            if (isOriginalColor) {
+                body.style.backgroundColor = 'red'; // 배경색을 빨강으로 변경
+            } else {
+                body.style.backgroundColor = '#cdcd'; // 배경색을 원래 색상으로 변경
+            }
+            isOriginalColor = !isOriginalColor; // 배경색 상태를 반전
+        }, 2000);
+    </script>
+</body>
+</html>

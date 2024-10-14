@@ -1,0 +1,49 @@
+{{>layout/header}}
+
+    <section>
+
+        <!-- 마이페이지 글씨부분 -->
+        <div class="logo">
+            <h1>마이페이지</h1>
+        </div>
+        <!-- 중간메뉴바 -->
+        <div class="mini_menubar_1">
+            <div class="mini_menubar_2">
+                <ul class="mini">
+                    <li class="mini_li"><a href="/mypage" class="mini_li_a">QRcode</a></li>
+                    <li class="mini_li"><a href="/editMember" class="mini_li_a">회원정보 수정</a></li>
+                    <li class="mini_li"><a href="/tweetBook" class="mini_li_a">찜 목록</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 찜 목록 부분 -->
+        <div class="information">
+            <h2 class="info">찜 목록</h2>
+            <div id="wishlist">
+                {{#wishList}}
+                    <div class="total_heartfull_list">
+                        <input type="hidden" value="{{id}}" class="wishlist_id">
+                        <img src="{{book.img}}" id="total_book_img">
+                        <div id="box">
+                            <h1 class="box_title" >{{book.title}}</h1>
+                            <h2 class="box_author">{{book.author}} ㅣ {{book.publisher}}</h2>
+                            <h3 class="box_price">금액: {{book.price}}원</h3>
+                            <!-- 찜 목록 삭제,장바구니 삭제 버튼 -->
+                            <div id="buttons">
+                                <button type="button" class="box_button">삭제</button>
+                            </div>
+                        </div>
+                    </div>
+                {{/wishList}}
+                {{^wishList}}
+                    <div class="wishlist_none">
+                        <p>찜한 도서가 없습니다.</p>
+                    </div>
+                {{/wishList}}
+            </div>
+        </div>
+
+    </section>
+    <script src="/js/tweetBook.js"></script>
+
+{{>layout/footer}}

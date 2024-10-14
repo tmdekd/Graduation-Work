@@ -1,0 +1,71 @@
+{{>layout/header}}
+    <section style="font-family: 'GmarketSansMedium', sans-serif;">
+        <input type="hidden" id="userPrincipal" value="{{userPrincipal.num}}">
+        <div id="total">
+            <div id="total_wrap">
+                <!-- 장바구니 헤더 -->
+                <div id="total_header" style="align-items: center">
+                    <h1 class="total_header_h1">장바구니</h1>
+                    <h1 class="total_header_h1" id="h1_pay">도서결제</h1>
+                    <h1 class="total_header_h1" id="h1_pay_end">결제완료</h1>
+                </div>
+
+                <!-- 장바구니에 담긴 상품입니다. 글씨부분 -->
+                <div id="total_content">
+                    <h1 id="total_content_h1" style="font-size: 28px">장바구니에 담긴 상품입니다.</h1>
+                </div>
+                {{#cartList}}
+                    <input type="hidden" value="{{member.id}}" id="memberId">
+                    <input type="hidden" value="{{member.name}}" id="memberName">
+                    <input type="hidden" value="{{member.email}}" id="memberEmail">
+                    <input type="hidden" value="{{member.phone}}" id="memberPhone">
+                    <!-- 장바구니에 담긴 도서 -->
+                    <div id="total_list_background">
+                        <div id="total_list" class="total_list">
+                            <input type="hidden" value="{{book.num}}" class="book_num">
+                            <input type="checkbox" class="checkbox" style="width: 50px; height: 50px">
+                            <img src="{{book.img}}" id="total_book_img" style="width: 25%; margin-right: 20px">
+                            <div id="box" style="font-size: 20px">
+                                <h1 class="box_title" style="font-size: 30px" >{{book.title}}</h1>
+                                <h2 class="box_author" style="font-size: 27px">{{book.author}}</h2>
+                                <h3 class="box_price" style="font-size: 27px">금액: {{book.price}}원</h3>
+                                <!-- 책 수량, 금액 -->
+                                <div id="box_input">
+                                    <h1 id="box_input_h1"  style="font-size: 27px">수량</h1>
+                                    <button type="button" id="minus" class="box_input_button" style="font-size: 25px">-</button>
+                                    <input type="text" name="amounts" value="{{quantity}}" size="2" id="count" class="box_input_button" style="font-size: 30px; text-align: center">
+                                    <button type="button" id="plus" class="box_input_button" style="font-size: 25px">+</button>
+                                </div>
+                                <div id="price_sum">
+                                    <h1 id="price_h1" style="font-size: 27px">총 금액:</h1>
+                                    <span class="my_sum" style="display: flex; align-items: center; margin: 0px 10px; font-size: 25px">
+                                        <input type="hidden" value="{{book.price}}" class="book_price">
+                                        <input type="hidden" value="{{quantity}}" class="book_quantity">
+                                        <span id="total_price" ></span>
+                                    </span>
+                                    <h1 id="price_h1" style="font-size: 27px">원</h1>
+                                </div>
+                                <!-- 장바구니 삭제 버튼 -->
+                                <div id="buttons" style="height: 45px"   >
+                                    <button type="button" class="box_button" style="font-size: 25px; width: 165px; height: 45px; font-family: 'GmarketSansMedium', sans-serif;">장바구니 삭제</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {{/cartList}}
+                    <!-- 결제하기 버튼 -->
+                    <div id="pay_box" style="padding: 40px 0">
+                        <button type="button" id="pay_button" style="font-size: 38px; height: 80px; width: 220px; font-family: 'GmarketSansMedium', sans-serif;">결제하기</button>
+                    </div>
+                {{^cartList}}
+<!--                    <div id="content">-->
+<!--                        <h1 id="total_content_h1" style="font-size: 28px">장바구니가 비어 있습니다.</h1>-->
+<!--                    </div>-->
+                {{/cartList}}
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.iamport.kr/v1/iamport.js"></script>
+    <script src="/js/cart.js"></script>
+{{>layout/footer}}

@@ -1,0 +1,301 @@
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@media(min-width:280px) {
+
+    /*header*/
+    .nanum-gothic-regular {
+        font-family: 'GmarketSansMedium';
+        font-weight: 400;
+        font-style: normal;
+        background-color: #F9EFDB;
+    }
+
+    .fa-solid fa-bars{
+        width: 20px;
+        height: 20px;
+        color: black;
+    }
+
+    #icon{
+        color: black;
+        display: none;
+    }
+
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #cdcd;
+        border-bottom: solid #E1E1E4 1px;
+        margin-bottom: 10px;
+    }
+
+    .navbar_menu {
+        list-style: none;
+        display: flex;
+        padding-left: 0;
+        width: 40%;
+    }
+
+    .navbar_menu_ul{
+        display: none;
+        text-align: center;
+        padding: 0;
+    }
+
+    .navbar_menu li:hover {
+        background: white;
+        border-radius: 3px;
+    }
+
+    .navbar_menu_ul{
+        display: none;
+        /* position: absolute; */
+    }
+
+    .navbar_menu ul li:hover {
+        display: block;
+    }
+
+    #navbar_menu_li:hover .navbar_menu_ul{
+        display: block;
+    }
+
+    .navbar_menu a{
+        text-decoration: none;
+        color: black;
+        font-size: 14px;
+        font-weight: 900;
+    }
+
+    .navbar_menu li{
+        padding: 10px 0;
+        margin: 10px 0;
+        list-style: none;
+        width:110px;
+        height: 20px;
+    }
+
+    .colorlogo{
+        width: 20%;
+        height: 80px;
+    }
+
+    #img_colorlogo{
+        width: 160px;
+        height: 80px;
+    }
+
+    .class_li{
+        margin-left: 40px;
+    }
+
+    .mypage_ul{
+        padding: 0;
+        display: none;
+    }
+
+    .login{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20%;
+    }
+
+    .login a{
+        width: 75px;
+        height: 25px;
+        border: solid #DDDBE1;
+        border-radius: 50px;
+        background-color: white;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        margin-right: 15px;
+    }
+
+    #my{
+        color: black;
+        font-size: 14px;
+    }
+
+    #img_cart{
+        margin-left: 5px;
+        height: 17px;
+        color: black;
+    }
+
+    #p_cart{
+        margin-right: 5px;
+        font-size: 12px;
+        color: black;
+        font-weight: 800;
+    }
+
+    .login_button{
+        width: 60px;
+        height: 30px;
+        /* margin-right: 20px; */
+        border-radius: 50px;
+        color: black;
+        border: solid 3px #DDDBE1;
+        background-color: white;
+        margin-right: 10px;
+        padding-top: 5px ;
+        padding-left: 10px;
+    }
+
+    .navbar_menu:hover .navbar_menu_ul{
+        height: 250px;
+        transition-duration: 1s;
+    }
+
+
+
+
+
+
+    /* section */
+    #qna_section {
+        min-height: 70vh;
+    }
+
+    /* Q&A */
+    #top{
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #top_h1{
+        width: 100px;
+        border-bottom: solid 1px;
+        font-weight: 100;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+
+    /* 제목 */
+    #question_title{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+
+    .question_label{
+        font-size: 20px;
+    }
+
+    #question_input{
+        width: 70%;
+        height: 40px;
+        margin-left: 10px;
+        border: none;
+        border-radius: 10px;
+    }
+
+
+    /* 내용 */
+    #question_content{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    #question_textarea{
+        width: 70%;
+        margin-left: 10px;
+        border: none;
+        border-radius: 10px;
+    }
+
+
+    /* 저장 */
+    #question_write_button{
+        height: 100px;
+        display: flex;
+        justify-content: right;
+    }
+    #write_button{
+        margin: 50px;
+        height: 35px;
+        width: 80px;
+        background-color: #FDE49E;
+        border-radius: 10px;
+        border: none;
+        box-shadow: 0px 3px 3px 3px #f1dea7;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 24px;
+    }
+
+    .navbar_menu{
+        display:none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+    }
+
+    .navbar_menu ul li{
+        width: 100%;
+    }
+
+    .navbar_menu li{
+        width: 100%;
+        text-align: center;
+    }
+
+    .colorlogo{
+        display: none;
+    }
+
+    #icon{
+        display: block;
+    }
+
+    .login{
+        text-align: center;
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .class_cart{
+        display: none;
+    }
+
+    .class_cart.active{
+        display: flex;
+    }
+
+    .login_button{
+        display: none;
+        margin: none;
+    }
+
+    .navbar_menu.active{
+        display: flex;
+        width: 100%;
+        height: 100%;
+    }
+
+    .login_button.active {
+        display: flex; /* 활성화 상태에서 로그인 버튼을 보이게 합니다 */
+
+    }
+
+}

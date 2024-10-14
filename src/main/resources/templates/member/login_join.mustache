@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>로그인 / 회원가입</title>
+    <link rel="stylesheet" href="/css/login_join.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8978c32416.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+<body class="nanum-gothic-regular">
+<div class="login-wrap">
+    <div id="logo_box">
+        <img src="/img/logo.png" id="login_logo" onclick="location.href='/'" style="cursor: pointer">
+    </div>
+    <div class="login-html">
+        <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">로그인</label>
+        <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">회원가입</label>
+        <div class="login-form">
+            <form action="/auth/loginProc" method="post" class="sign-in-htm">
+                <div class="group">
+                    <label for="id" class="label">아이디</label>
+                    <input id="id" name="id" type="text" class="input">
+                </div>
+                <div class="group">
+                    <label for="password" class="label">비밀번호</label>
+                    <input id="password" name="pwd" type="password" class="input" data-type="password">
+                    <i class="fa fa-eye fa-lg"></i>
+                </div>
+                <div class="group">
+                    <input id="check" type="checkbox" class="check">
+                    <label for="check"><span class="icon"></span> 아이디 저장</label>
+                </div>
+                <div class="group">
+                    <input type="submit" class="button" id="btn_login" value="로그인">
+                </div>
+                {{#errorMessage}}
+                    <div id="error_msg" style="font-size: 14px; color: red; text-align: center">{{errorMessage}}</div>
+                {{/errorMessage}}
+                <div class="hr"></div>
+                <div class="foot-lnk">
+                    <a href="/auth/reset_pwd">비밀번호 재설정</a>
+                </div>
+            </form>
+
+            <div class="sign-up-htm">
+                <div class="group">
+                    <label for="name" class="label">이름</label>
+                    <input id="name" name="name" type="text" class="input">
+                </div>
+                <div class="group">
+                    <label for="phone" class="label">연락처</label>
+                    <input id="phone" name="phone" type="text" class="input" placeholder="연락처 예시 (010-XXXX-XXXX)">
+                </div>
+                <div class="group">
+                    <label for="nickname" class="label">아이디</label>
+                    <input id="nickname" name="id" type="text" class="input">
+                </div>
+                <div class="group">
+                    <label for="pwd" class="label">비밀번호</label>
+                    <input id="pwd" name="pwd" type="password" class="input" data-type="password">
+                </div>
+                <div class="group">
+                    <label for="pwdChk" class="label">비밀번호 확인</label>
+                    <input id="pwdChk" name="pwdChk" type="password" class="input" data-type="password">
+                </div>
+                <div class="group">
+                    <label for="email" class="label">이메일</label>
+                    <input id="email" name="email" type="email" class="input" placeholder="이메일 예시 (example@naver.com)">
+                </div>
+                <div class="group">
+                    <input type="submit" class="button" id="btn_save" value="회원가입">
+                </div>
+                <div class="hr"></div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/js/login_join.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

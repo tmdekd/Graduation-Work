@@ -1,0 +1,105 @@
+/*@font-face {*/
+/*    font-family: 'NanumSquareNeo-Variable';*/
+/*    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');*/
+/*    font-weight: normal;*/
+/*    font-style: normal;*/
+/*}*/
+
+/*@media(min-width:280px) {*/
+
+/*    !* 장바구니 도서결제 결제완료 부분 *!*/
+/*    .nanum-gothic-regular {*/
+/*        font-family: 'NanumSquareNeo-Variable';*/
+/*        font-weight: 400;*/
+/*        font-style: normal;*/
+/*        background-color: #cdcd;*/
+/*        margin: 0;*/
+/*        padding: 0;*/
+/*    }*/
+
+/*    #wrap{*/
+/*        height: 1000px;*/
+/*        width: 90%;*/
+/*        margin: 50px auto;*/
+/*        background-color: #F9EFDB;*/
+/*    }*/
+
+/*    #header{*/
+/*        display: flex;*/
+/*        justify-content: space-around;*/
+/*        background-color: #067B5A;*/
+/*        height: 100px;*/
+/*        width: 100%;*/
+/*    }*/
+
+/*    .header_h1{*/
+/*        color: white;*/
+/*        font-size: 20px;*/
+/*        padding-right: 10px;*/
+/*        padding-left: 10px;*/
+/*        padding-top: 30px;*/
+/*    }*/
+
+/*    #pay{*/
+/*        color: #125429;*/
+/*    }*/
+
+/*    #pay_end{*/
+/*        color: #125429;*/
+/*    }*/
+
+
+
+
+
+
+/*    !* 장바구니가 비어있습니다 글씨부분 *!*/
+/*    #content{*/
+/*        background-color: white;*/
+/*        width: 80%;*/
+/*        height: 800px;*/
+/*        margin: 40px auto;*/
+/*        display: flex;*/
+/*        align-items: center;*/
+/*        justify-content: center;*/
+/*        flex-direction: column;*/
+/*    }*/
+
+/*    #content_h1{*/
+/*        font-size: 10px;*/
+
+/*    }*/
+
+/*    #cart_btn{*/
+/*        font-size: 10px;*/
+/*        padding: 6px;*/
+/*        border: none;*/
+/*    }*/
+/*}*/
+
+/*@media(min-width:700px){*/
+
+/*    !* 장바구니 도서결제 결제완료 부분 *!*/
+/*    #header{*/
+/*        height: 120px;*/
+/*    }*/
+
+/*    .header_h1{*/
+/*        font-size: 40px;*/
+/*        padding-top: 20px;*/
+/*    }*/
+
+
+
+
+/*    !* 장바구니가 비어있습니다 글씨부분 *!*/
+/*    #content_h1{*/
+/*        font-size: 25px;*/
+/*    }*/
+
+/*    #cart_btn{*/
+/*        font-size: 18px;*/
+/*        padding: 6px;*/
+/*        border: none;*/
+/*    }*/
+/*}*/

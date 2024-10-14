@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>출입</title>
+
+    <link rel="stylesheet" href="/css/out.css">
+</head>
+<body class="nanum-gothic-regular">
+    <div class="background">
+        <h1 id="id_h1">알림</h1>
+        <div id="background_h2">
+            {{#errorMessage}}
+                <h2 class="id_h2">{{errorMessage}}</h2>
+            {{/errorMessage}}
+            {{^errorMessage}}
+                <h2 class="id_h2">QR 코드를 인식시켜 주세요.</h2>
+            {{/errorMessage}}
+        </div>
+    </div>
+    <!--    <script src="/js/scan_noCategory_wait.js"></script>-->
+</body>
+</html>

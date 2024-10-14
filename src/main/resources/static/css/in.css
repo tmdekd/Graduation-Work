@@ -1,0 +1,53 @@
+.nanum-gothic-regular {
+    font-family: 'GmarketSansMedium', sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    background-color: #cdcd;
+}
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.background{
+    margin: 100px auto;
+    background-color: white;
+    height: 550px;
+    width: 700px;
+    border: none;
+    border-radius: 30px;
+}
+
+#id_h1{
+    width: 700px;
+    height: 150px;
+    border-top: none;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    background-color: #F9EFDB;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 45px;
+    font-weight: 500;
+}
+
+#background_h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+}
+
+#id_h2{
+    font-size: 40px;
+    font-weight: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}

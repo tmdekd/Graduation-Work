@@ -1,0 +1,400 @@
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@media(min-width:280px){
+    /*header*/
+    .nanum-gothic-regular {
+        font-family: 'GmarketSansMedium', sans-serif;
+        font-weight: 100;
+        justify-content: center;
+        background-color: #cdcd;
+    }
+
+    #wrap{
+        height: 100%;
+        width: 90%;
+        margin: 50px auto;
+        padding-bottom: 40px;
+        background-color: #F9EFDB;
+    }
+
+    #header{
+        display: flex;
+        justify-content: space-around;
+        background-color: #067B5A;
+        height: 100px;
+        width: 100%;
+    }
+
+    .header_h1{
+        color: #125429;
+        font-size: 20px;
+        padding-right: 10px;
+        padding-left: 10px;
+        padding-top: 30px;
+    }
+
+    #pay{
+        color: #125429;
+    }
+
+    #pay_end{
+        color: white;
+    }
+
+
+
+
+    /* 구매도서 */
+
+    #content{
+        background-color: white;
+        width: 80%;
+        margin: 40px auto;
+        margin-bottom: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    #down{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 0;
+        height: 100px;
+    }
+
+    #payment_day{
+        font-size: 19px;
+        margin-right: 10px;
+    }
+
+    #down-ticon{
+        margin-left: 5px;
+    }
+
+    .menu{
+        font-size: 20px;
+    }
+
+    #cart_btn{
+        font-size: 10px;
+        padding: 6px;
+        border: none;
+    }
+
+    #totalpayment_list{
+        display: flex;
+        /* align-items: center; */
+        background-color: white;
+        margin-right: 15px;
+        margin-left: 15px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-bottom: solid 1px #cdcd;
+        border-top: solid 1px #cdcd;
+    }
+
+    .checkbox{
+        width: 20px;
+    }
+
+    #total_book_img{
+        margin-left: 20px;
+        margin-top: 25px;
+        width: 30%;
+        height: 50%;
+    }
+
+    #box{
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+
+    .box_title{
+        font-size: 15px;
+        font-weight: 100;
+        margin-bottom: 5px;
+    }
+
+    .box_author{
+        font-size: 13px;
+        font-weight: 100;
+        padding-top: 0;
+    }
+
+    .box_price{
+        font-size: 13px;
+        font-weight: 100;
+    }
+
+
+
+
+    /* 결제 시간 */
+    #time{
+        height: 100%;
+        font-size: 12px;
+    }
+
+
+
+
+    /* 책 수량, 금액 */
+    #box_input{
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .box_input_h1{
+        align-items: center;
+        font-size: 10px;
+        font-weight: 100;
+        margin-right:10px;
+        margin-bottom: 0;
+    }
+
+    .count{
+        font-size: 13px;
+        margin: 0;
+    }
+
+    .box_input_button{
+        font-size: 10px;
+        border: solid 1px;
+    }
+
+    #price_sum{
+        display: flex;
+    }
+
+    #price_h1{
+        font-size: 13px;
+        font-weight: 100;
+    }
+
+
+
+
+
+
+    /* 장바구니 삭제 버튼 */
+
+    #buttons{
+        padding-bottom: 5px;
+    }
+
+    .box_button{
+        width: 50px;
+        height: 25px;
+        font-size: 15px;
+        background-color: white;
+        border: solid 1px;
+        border-radius: 3px;
+    }
+
+
+
+    /* 결제 금액 */
+    #total_price_box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #total_price{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+        height: 80px;
+        background-color: white;
+    }
+
+    #price{
+        font-size: 18px;
+        margin-bottom: 0;
+        margin-left: 15px;
+    }
+
+    #price_number{
+        font-size: 18px;
+        margin-bottom: 0;
+        margin-right: 15px;
+    }
+
+
+
+
+    /* 결제 수단 */
+    .way{
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+    }
+
+    #payment_way{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        width: 80%;
+        height: 120px;
+        border-bottom: solid 1px #cdcd;
+    }
+
+    #payment_way_box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #payment_way_h1{
+        background-color: white;
+        font-size: 20px;
+        margin-bottom: 0;
+    }
+
+    .way_background{
+        height: 360px;
+        margin: 0 10%;
+        background-color: white;
+        padding: 30px;
+    }
+
+    .katopa{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+        width: 80%;
+        background-color: white;
+    }
+
+    .katopa_button{
+        background: white;
+        border: solid 1px;
+        border-radius: 100px;
+        height: 60%;
+        width: 100%
+    }
+
+    #kakao_img{
+        width:40px;
+        height: 20px;
+        margin-left: 10px;
+    }
+
+    #toss_img{
+        width: 65px;
+        height: 40px;
+    }
+}
+
+
+
+@media(min-width:400px) {
+    /* 구매도서 */
+    #total_book_img{
+        width: 35%;
+        height: 65%;
+    }
+}
+
+
+
+
+@media(min-width:700px){
+
+    /* 장바구니 도서결제 결제완료 부분 */
+    #header{
+        height: 120px;
+    }
+
+    .header_h1{
+        font-size: 35px;
+        padding-top: 20px;
+    }
+
+
+
+
+    /* 구매도서 */
+    .menu{
+        font-size: 20px;
+    }
+
+    .checkbox{
+        width: 20px;
+    }
+
+    #total_book_img{
+        width: 20%;
+        height: 75%;
+    }
+
+    .box_title{
+        font-size: 20px;
+        text-align: left;
+    }
+
+    .box_author{
+        font-size: 13px;
+        text-align: left;
+    }
+
+    .box_price{
+        font-size: 13px;
+    }
+
+
+
+    /* 책 수량, 금액 */
+
+    .box_input_h1{
+        font-size: 13px;
+    }
+
+    #price_h1{
+        font-size: 13px;
+    }
+
+
+
+
+    /* 장바구니 삭제 버튼 */
+    #box_button{
+        font-size: 13px;
+    }
+
+
+    /* 결제 금액 */
+    #total_price{
+        justify-content: left;
+    }
+
+    #price_number{
+        margin-left: 20px;
+    }
+
+
+
+    /* 결제 수단 */
+    .katopa_button{
+        background: white;
+        border: solid 1px;
+        border-radius: 100px;
+        height: 80%;
+        width: 70%
+    }
+}

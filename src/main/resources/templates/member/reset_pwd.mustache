@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>비밀번호 재설정</title>
+    <link rel="stylesheet" href="/css/reset_pwd.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8978c32416.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="login-wrap">
+        <div id="logo_box">
+            <img src="/img/logo.png" id="login_logo" onclick="location.href='/'" style="cursor: pointer">
+        </div>
+        <div class="login-html">
+            <input id="tab-2" type="radio" name="tab" class="sign-up" checked><label for="tab-2" class="tab">비밀번호 재설정</label>
+            <div class="login-form">
+                <div class="sign-up-htm">
+                    <div class="group">
+                        <label for="nickname" class="label">아이디</label>
+                        <input id="nickname" name="id" type="text" class="input">
+                    </div>
+                    <div class="group">
+                        <label for="email" class="label">이메일</label>
+                        <input id="email" name="email" type="email" class="input" placeholder="이메일 예시 (example@naver.com)">
+                    </div>
+                    <div class="group">
+                        <input type="submit" class="button" id="btn_save" value="비밀번호 재설정">
+                    </div>
+                    <div class="hr"></div>
+                    <div id="loadingBar">로딩 중...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/reset_pwd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

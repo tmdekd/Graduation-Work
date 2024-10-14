@@ -1,0 +1,182 @@
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    font-family: 'GmarketSansMedium', sans-serif;
+}
+
+@media(min-width:280px) {
+
+    .nanum-gothic-regular {
+        font-family: 'GmarketSansMedium';
+        font-weight: 400;
+        font-style: normal;
+        justify-content: center;
+        background-color: #cdcd;
+    }
+
+
+
+    /* 마이페이지 글씨부분 */
+    .logo{
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 140px;
+    }
+
+    .logo h1{
+        z-index: 100;
+    }
+
+
+
+
+
+    /* 중간메뉴바 부분 */
+    .mini{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #cdcd;
+        margin-bottom: 50px;
+        padding: 0;
+        height: 55px;
+    }
+
+    .mini_li{
+        list-style: none;
+    }
+
+    .mini_li_a{
+        text-decoration: none;
+        padding: 0 10px;
+        color: black;
+        font-size: 16px;
+    }
+
+
+
+
+
+    /* 회원정보 수정 부분 */
+    .info{
+        width: 70%;
+        background-color: #F9EFDB;
+        font-size: 23px;
+        height: 100px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        border: solid 3px;
+        box-shadow: 13px 13px #607274;
+        margin: 0 auto;
+    }
+    .sign-up-htm{
+        display: flex;
+        justify-content: center;
+        height: auto;
+        width: 70%;
+        padding: 50px 0;
+        margin: 0 auto;
+        margin-bottom: 100px;
+        border: solid 3px;
+        box-shadow: 13px 13px #607274;
+        background-color: white;
+    }
+
+    .info_group{
+        padding: 50px 0;
+    }
+
+    .group{
+        width: 200px;
+        margin-bottom: 10px;
+        position: relative;
+    }
+    .fa-eye, .fa-eye-slash {
+        position: absolute;
+        right: 10px;
+        top: 55%;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+    .label {
+        width: 100%;
+        display: block;
+        font-size: 16px;
+    }
+
+    .input{
+        margin-bottom: 15px;
+        border-radius: 25px;
+        border: solid 1px gray;
+        background-color: white;
+        height: 35px;
+        width: 100%;
+        background-color: #F6F6F6
+    }
+
+    .btn{
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .button{
+        margin-top: 50px;
+        width: 60px;
+        height: 40px;
+        border: none;
+        border-radius: 5px;
+        background-color: #F6F6F6;
+    }
+
+    .button:hover{
+        cursor: pointer;
+    }
+    .button:first-child {
+        margin-right: 10px;
+        box-shadow: 0px 3px 2px 4px #e2dfdf;
+    }
+}
+
+
+
+
+@media(min-width:500px){
+
+    /* 회원정보 수정 부분 */
+    .group{
+        width: 300px;
+        margin: 0 auto;
+    }
+}
+
+
+
+
+@media(min-width: 768px){
+
+    /* 회원정보 수정 부분 */
+    .group{
+        width: 400px;
+        margin: 0 auto;
+    }
+
+    .input{
+        width: 100%;
+        height: 45px;
+    }
+
+    .label{
+        font-size: 20px;
+    }
+
+}

@@ -1,0 +1,28 @@
+{{>layout/header}}
+
+    <section id="qna_section">
+        <!-- Q&A -->
+        <div id="top">
+            <h1 id="top_h1">Q&A</h1>
+        </div>
+        {{#question}}
+            <!-- 제목 -->
+            <div id="question_title">
+                <label class="question_label">제목:</label>
+                <input type="text" id="question_input" value="{{title}}">
+            </div>
+            <!-- 내용 -->
+            <div id="question_content">
+                <label class="question_label">내용:</label>
+                <textarea rows="20" id="question_textarea">{{content}}</textarea>
+            </div>
+            <div id="question_write_button">
+                <button type="button" id="write_button" data-id="{{questionId}}">수정</button>
+            </div>
+        {{/question}}
+
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/js/qna_edit.js"></script>
+
+{{>layout/footer}}

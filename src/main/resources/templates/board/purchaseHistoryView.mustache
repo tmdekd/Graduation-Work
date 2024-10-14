@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>구매 이력</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+</head>
+<body class="nanum-gothic-regular">
+    <div class="purchase-history-container">
+        <h2>당일 구매 이력</h2>
+        {{#purchaseHistories}}
+            <div class="purchase-history">
+                <p>상품명: {{book.title}}</p>
+                <p>구매 가격: {{book.price}}</p>
+                <p>구매 날짜: {{purchaseDate}}</p>
+                <p>구매자: {{member.name}}</p>
+                <p>인증 여부: {{authenticationStatus}}</p>
+            </div>
+        {{/purchaseHistories}}
+        {{^purchaseHistories}}
+            <p>당일 구매 이력이 없습니다.</p>
+        {{/purchaseHistories}}
+    </div>
+</body>
+</html>

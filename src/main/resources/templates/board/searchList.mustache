@@ -1,0 +1,117 @@
+{{>layout/header}}
+
+    <section>
+        {{#userPrincipal}}
+            <input type="hidden" value="{{userPrincipal.num}}">
+        {{/userPrincipal}}
+        <div id="middleline">
+            <div class="top">
+                <div id="title_search">
+<!--                    <form  action="/auth/search" method="get">-->
+<!--                        <div class="search">-->
+<!--                            <input type="text" id="input_search" placeholder="검색어 입력" name="keyword">-->
+<!--                            <button type="submit" id="div2_button">-->
+<!--                                <i class="fa-solid fa-magnifying-glass" id="button_img"></i>-->
+<!--                            </button>-->
+<!--                        </div>-->
+<!--                    </form>-->
+                    <form action="/auth/search" method="get" id="id_div2_form">
+                        <input type="text" id="search" name="keyword" placeholder="검색어 입력">
+                        <button type="button" id="div2_button">
+                            <i class="fa-solid fa-magnifying-glass" id="submit_icon"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="mini_menubar_1">
+                <div class="mini_menubar_2">
+                    <ul class="mini">
+                        <li class="mini_li"><a href="/auth/book/novel" class="mini_li_a">소설</a></li>
+                        <li class="mini_li"><a href="/auth/book/history_culture" class="mini_li_a">역사/문화</a></li>
+                        <li class="mini_li"><a href="/auth/book/personalDevelopment" class="mini_li_a">자기계발</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="one_background">
+                <div id="one">
+                    <div id="title">
+                        <h1>검색하신 도서 결과입니다.</h1>
+                    </div>
+                    {{#searchList}}
+                        <div class="book_list">
+                            <input type = "hidden"  value = "{{num}}" class="book_num">
+                            <div class="book_center">
+                                <a href="#"><img src="{{img}}" class="book_img"></a>
+                            </div>
+                            <a href="#" class="book_1"><p class="book_1">{{title}}</p></a>
+                            <p class="book_2">{{author}} ㅣ {{publisher}}</p>
+                            <p class="book_3">{{price}}원</p>
+
+                            <div class="button_boxs">
+                                <button type="submit" class="heart"><i class="fa-regular fa-heart" style="color: #ff3d3d;"></i></button></a>
+    <!--                            <button type="submit" class="cart"><i class="fa-solid fa-cart-shopping"></i>장바구니</button>-->
+                            </div>
+                        </div>
+                    {{/searchList}}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.heart').click(function(){
+                console.log("heart click");
+                var userId = $("input[type=hidden]").val(); // hidden input에서 사용자 이름을 가져옵니다.
+                var bookInfo = $(this).closest('.book_list'); // 현재 클릭된 heart button이 속한 도서 정보를 담는 요소를 선택합니다.
+                var bookId = bookInfo.find('.book_num').val(); // class="book_num"에서 도서 번호를 가져옵니다.
+                // 도서 정보를 객체로 구성합니다.
+                var bookData = {
+                    member: {num: userId}, // 사용자 이름
+                    book: {num: bookId}  // 도서 번호
+                };
+                console.log("memberNum = " + userId);
+                console.log("bookNum = " + bookId);
+                console.log("bookData = ", bookData);
+                $.ajax({
+                    url: '/tweetBook', // 요청을 보낼 서버의 URL 주소입니다.
+                    type: 'POST', // 데이터를 서버로 보내는 방법입니다.
+                    data: JSON.stringify(bookData), // 서버로 보낼 데이터입니다. 객체를 JSON 문자열로 변환합니다.
+                    contentType: 'application/json; charset=utf-8', // 보내는 데이터의 타입입니다.
+                    dataType: 'json', // 서버에서 보내주는 데이터의 타입입니다.
+                    success: function(response) {
+                        // 요청이 성공하면 실행되는 함수입니다.
+                        if(response.status === 200) {
+                            // alert("도서가 찜 목록에 추가되었습니다.");
+                            Swal.fire({
+                                title: "찜 목록 추가 성공",
+                                text: "도서가 찜 목록에 추가되었습니다.",
+                                icon: "success"
+                            });
+                        } else if(response.status === 400) {
+                            // alert("이미 찜 목록에 추가되었습니다.");
+                            Swal.fire({
+                                title: "찜 목록 추가 실패",
+                                text: "이미 찜 목록에 추가되었습니다.",
+                                icon: "error"
+                            });
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        // 요청이 실패하면 실행되는 함수입니다.
+                        // alert("오류 발생" + status + error);
+                        Swal.fire({
+                            title: "찜 목록 추가 실패",
+                            text: "로그인 후, 다시 시도해주세요.",
+                            icon: "error"
+                        });
+                    }
+
+                });
+            });
+        });
+    </script>
+
+
+{{>layout/footer}}

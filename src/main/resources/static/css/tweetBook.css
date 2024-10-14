@@ -1,0 +1,203 @@
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@media(min-width:280px) {
+
+    .nanum-gothic-regular {
+        font-family: 'GmarketSansMedium';
+        font-weight: 200;
+        font-style: normal;
+        justify-content: center;
+        background-color: #cdcd;
+    }
+
+
+
+
+    /* 마이페이지 글씨부분 */
+    .logo{
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 110px;
+    }
+
+    .logo h1{
+        z-index: 100;
+        font-size: 25px;
+    }
+
+
+
+
+
+
+    /* 중간메뉴바 부분 */
+    .mini{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #cdcd;
+        margin-bottom: 50px;
+        padding: 0;
+        height: 55px;
+    }
+
+    .mini_li{
+        list-style: none;
+    }
+
+    .mini_li_a{
+        text-decoration: none;
+        padding: 0 10px;
+        color: black;
+        font-size: 16px;
+    }
+
+
+
+
+
+
+    /* 찜 목록 부분 */
+
+    .info{
+        width: 70%;
+        background-color: #F9EFDB;
+        font-size: 23px;
+        height: 100px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        border: solid 3px;
+        box-shadow: 13px 13px #607274;
+        margin: 0 auto;
+    }
+
+    #wishlist{
+        min-height: 70vh;
+        width: 70%;
+        margin: 0 auto;
+        border: solid 3px;
+        box-shadow: 13px 13px #607274;
+        background-color: white;
+    }
+
+    .total_heartfull_list{
+        display: flex;
+        align-items: center;
+        margin-right: 15px;
+        margin-left: 15px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-bottom: solid 1px #cdcd;
+    }
+
+    #total_book_img{
+        margin: 10px;
+        width: 30%;
+        height: 45%;
+    }
+
+    #box{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .box_title{
+        font-size: 15px;
+        font-weight: 100;
+        padding: 0 5px;
+        margin-bottom: 0;
+    }
+
+    .box_author{
+        font-size: 12px;
+        font-weight: 100;
+        padding: 5px;
+        padding-top: 0;
+    }
+
+    .box_price{
+        font-size: 12px;
+        font-weight: 100;
+        padding-left: 5px;
+    }
+
+    .wishlist_none{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 70vh;
+        width: 100%;
+        margin: 0 auto;
+        border: solid 3px;
+        box-shadow: 13px 13px #607274;
+        background-color: white;
+    }
+
+    .wishlist_none h2{
+        font-size: 20px;
+        font-weight: 100;
+    }
+
+
+
+
+
+    /* 찜 목록 삭제 버튼 */
+
+    #buttons{
+        margin-top: 10px;
+        padding-bottom: 5px;
+        padding-left: 5px;
+    }
+
+    .box_button{
+        width: 50px;
+        height: 25px;
+        font-size: 15px;
+        background-color: white;
+        border: solid 1.5px;
+        border-radius: 5px;
+    }
+}
+
+@media(min-width:400px){
+    /* 장바구니에 담긴 도서 */
+    #total_book_img{
+        width: 27%;
+    }
+}
+
+
+@media(min-width:500px){
+
+    /* 마이페이지 글씨부분 */
+    .logo{
+        height: 140px;
+    }
+
+}
+
+@media(min-width: 768px){
+
+    /* 찜 목록 부분 */
+    .info{
+        width: 70%;
+    }
+
+    .wishlist{
+        width: 70%;
+    }
+
+    #total_book_img{
+        width: 10%;
+    }
+
+}

@@ -1,0 +1,527 @@
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@media(min-width:280px) {
+    /* 헤더 */
+    .fa-solid fa-bars{
+        width: 20px;
+        height: 20px;
+        color: black;
+    }
+
+    #icon{
+        color: black;
+        display: none;
+    }
+
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #cdcd;
+        border-bottom: solid #E1E1E4 1px;
+        margin-bottom: 10px;
+    }
+
+    .navbar_menu {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        padding-left: 0;
+        width: 60%;
+    }
+
+    .navbar_menu_ul{
+        display: none;
+        text-align: center;
+        padding: 0;
+    }
+
+    .navbar_menu li:hover {
+        background: white;
+        border-radius: 3px;
+    }
+
+    .navbar_menu_ul{
+        display: none;
+        /* position: absolute; */
+    }
+
+    .navbar_menu ul li:hover {
+        display: block;
+    }
+
+    #navbar_menu_li:hover .navbar_menu_ul{
+        display: block;
+    }
+
+    .navbar_menu a{
+        text-decoration: none;
+        color: black;
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .navbar_menu li{
+        padding: 10px 0;
+        margin: 10px 0;
+        list-style: none;
+        width:110px;
+        height: 20px;
+        text-align: center;
+    }
+
+    .colorlogo{
+        width: 10%;
+        height: 80px;
+    }
+
+    #img_colorlogo{
+        width: 160px;
+        height: 80px;
+    }
+
+    .class_li{
+        margin-left: 40px;
+    }
+
+    .mypage_ul{
+        padding: 0;
+        display: none;
+    }
+
+    .login{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 15%;
+    }
+
+    .login a{
+        width: 75px;
+        height: 25px;
+        border: solid #DDDBE1;
+        border-radius: 50px;
+        background-color: white;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        margin-right: 15px;
+    }
+
+    #my{
+        color: black;
+        font-size: 14px;
+    }
+
+    #img_cart{
+        margin-left: 5px;
+        height: 17px;
+        color: black;
+    }
+
+    #p_cart{
+        margin-right: 5px;
+        font-size: 12px;
+        color: black;
+        font-weight: 800;
+    }
+
+    .login_button{
+        width: 60px;
+        height: 30px;
+        /* margin-right: 20px; */
+        border-radius: 50px;
+        color: black;
+        border: solid 3px #DDDBE1;
+        background-color: white;
+        margin-right: 10px;
+        padding-top: 5px ;
+        padding-left: 10px;
+    }
+
+    .navbar_menu:hover .navbar_menu_ul{
+        height: 250px;
+        transition-duration: 1s;
+    }
+
+    #total_wrap{
+        min-height: 700px;
+        width: 90%;
+        margin: 50px auto;
+        background-color: #F9EFDB;
+    }
+
+    /* 장바구니 헤더 */
+    .nanum-gothic-regular {
+        font-family: 'GmarketSansMedium';
+        background-color: #cdcd;
+        margin: 0;
+        padding: 0;
+    }
+
+    #total_header{
+        display: flex;
+        justify-content: space-around;
+        background-color: #067B5A;
+        height: 100px;
+        width: 100%;
+    }
+
+    .total_header_h1{
+        color: white;
+        font-size: 20px;
+        padding-right: 10px;
+        padding-left: 10px;
+        padding-top: 30px;
+    }
+
+    #h1_pay{
+        color: #125429;
+    }
+
+    #h1_pay_end{
+        color: #125429;
+    }
+
+
+
+
+    /* 장바구니 담긴 상품입니다. 글씨 부분 */
+    #total_content{
+        background-color: white;
+        width: 90%;
+        /* height: 800px; */
+        margin: 40px auto;
+        margin-bottom: 0;
+        display: flex;
+        /* align-items: center;
+        justify-content: center; */
+        flex-direction: column;
+    }
+
+    #total_content_h1{
+        text-align: center;
+        font-size: 20px;
+        font-weight: 100;
+        padding-bottom: 30px;
+        padding-top: 30px;
+    }
+
+
+
+
+
+    /* 장바구니에 담긴 도서 */
+    #total_list_background{
+        height: 100%;
+        width: 90%;
+        margin: 0 auto;
+        background-color: white;
+    }
+
+    #total_list{
+        display: flex;
+        align-items: center;
+        background-color: white;
+        margin-right: 15px;
+        margin-left: 15px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-bottom: solid 1px #cdcd;
+        border-top: solid 1px #cdcd;
+    }
+
+    .checkbox{
+        width: 15px;
+    }
+
+    #total_book_img{
+        margin: 10px;
+        width: 30%;
+        height: 45%;
+    }
+
+    #box{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .box_title{
+        font-size: 18px;
+        font-weight: 100;
+        padding: 5px;
+        margin-bottom: 0;
+    }
+
+    .box_author{
+        font-size: 15px;
+        font-weight: 100;
+        padding: 5px;
+        padding-top: 0;
+    }
+
+    .box_price{
+        font-size: 15px;
+        font-weight: 100;
+        padding-left: 5px;
+    }
+
+
+
+
+    /* 책 수량, 금액 */
+    #box_input{
+        display: flex;
+        align-items: center;
+    }
+
+    #box_input_h1{
+        font-size: 15px;
+        font-weight: 100;
+        margin-right:10px;
+    }
+
+    .box_input_button{
+        font-size: 15px;
+    }
+
+    #price_sum{
+        display: flex;
+        align-items: center;
+    }
+
+    #price_h1{
+        font-size: 15px;
+        font-weight: 100;
+        height: 25px;
+    }
+
+
+
+
+    /* 장바구니 삭제 버튼 */
+
+    #buttons{
+        padding-bottom: 5px;
+    }
+
+    .box_button{
+        font-size: 15px;
+        background-color: white;
+        border: solid 1px;
+        border-radius: 3px;
+        height: 30px;
+    }
+
+
+
+
+    /* 결제하기 버튼 */
+    #pay_box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+    }
+
+    #pay_button{
+        width: 220px;
+        background-color: #067B5A;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        font-size: 20px;
+    }
+
+}
+
+
+
+@media(min-width:400px){
+    /* 장바구니에 담긴 도서 */
+    #total_book_img{
+        width: 25%;
+    }
+
+    .box_title{
+        font-size: 18px;
+    }
+}
+
+@media(min-width:500px){
+    /* 장바구니에 담긴 도서 */
+    #total_book_img{
+        width: 15%;
+    }
+
+
+
+    /* 책 수량, 금액 */
+    .box_input_button{
+        font-size: 15px;
+    }
+
+
+
+    /* 결제하기 버튼 */
+    #pay_button{
+        height: 50px;
+        width: 200px;
+        background-color: #067B5A;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        font-size: 15px;
+    }
+}
+
+
+
+@media(min-width:700px){
+    /* header */
+    #nav_home{
+        display: none;
+    }
+
+    .login_button{
+        /* padding-bottom: 6px;
+        padding-right: 11px; */
+        padding: 0;
+    }
+
+    /* 장바구니 헤더 */
+    #total_header{
+        height: 120px;
+    }
+
+    .total_header_h1{
+        font-size: 30px;
+        padding-top: 20px;
+    }
+
+
+
+
+    /* 장바구니에 담긴 도서 */
+    .checkbox{
+        width: 25px;
+    }
+
+    #total_book_img{
+        width: 12%;
+    }
+
+    .box_title{
+        font-size: 20px;
+    }
+
+    .box_author{
+        font-size: 18px;
+    }
+
+    .box_price{
+        font-size: 18px;
+    }
+
+
+
+
+
+    /* 장바구니에 담긴 상품입니다. 글씨부분 */
+    #total_content_h1{
+        font-size: 25px;
+        font-weight: 100;
+    }
+
+
+
+
+    /* 책 수량, 금액 */
+
+    #box_input_h1{
+        font-size: 18px;
+    }
+
+    #price_h1{
+        font-size: 18px;
+    }
+
+
+
+    /*결제하기 버튼 */
+    #pay_button{
+        font-size: 18px;
+    }
+
+}
+
+
+@media screen and (max-width: 768px) {
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 24px;
+    }
+
+    .navbar_menu{
+        display:none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+    }
+
+    .navbar_menu ul li{
+        width: 100%;
+    }
+
+    .navbar_menu li{
+        width: 100%;
+        text-align: center;
+    }
+
+    .colorlogo{
+        display: none;
+    }
+
+    #icon{
+        display: block;
+    }
+
+    .login{
+        text-align: center;
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .class_cart{
+        display: none;
+    }
+
+    .class_cart.active{
+        display: flex;
+    }
+
+    .login_button{
+        display: none;
+        margin: 0;
+    }
+
+    .navbar_menu.active{
+        display: flex;
+        width: 100%;
+        height: 100%;
+    }
+
+    .login_button.active {
+        display: flex; /* 활성화 상태에서 로그인 버튼을 보이게 합니다 */
+
+    }
+
+}

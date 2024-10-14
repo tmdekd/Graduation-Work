@@ -1,0 +1,55 @@
+{{>layout/header}}
+    <section style="min-height: 100vh">
+        <div id="all">
+            <div id="wrap" style="min-height: 90vh">
+                <div id="header" style="align-items: center">
+                    <h1 class="header_h1" id="header_cart">장바구니</h1>
+                    <h1 class="header_h1" id="pay">도서결제</h1>
+                    <h1 class="header_h1" id="pay_end">결제완료</h1>
+                </div>
+                <!-- 구매도서 -->
+                <div id="content">
+                    <div id="down">
+                        <div id="payment_day">{{today}}</div>
+                        <div id="menu-btn" class="menu">구매 내역<i class="fa-solid fa-caret-down" id="down-ticon"></i></div>
+                    </div>
+                    {{#todayPurchaseHistory}}
+                        <!-- 구매도서 -->
+                        <ul id="payment_list" class="list-group">
+                            <!-- 결제시간 -->
+                            <div id="time">
+                                <div id="payment_time" style="font-size: 18px">결제 시간 {{purchaseTime}}</div>
+                            </div>
+                            <div id="totalpayment_list">
+                                <img src="{{book.img}}" id="total_book_img">
+                                <div id="box">
+                                    <h1 class="box_title" style="font-size: 20px; color: black">{{book.title}}</h1>
+                                    <h2 class="box_author" style="font-size: 20px; color: black">{{book.author}} | {{book.publisher}}</h2>
+                                    <h3 class="box_price" style="font-size: 20px">금액: {{book.price}}원</h3>
+                                    <div id="box_input">
+                                        <h1 class="box_input_h1" style="font-size: 20px; color: black">수량:</h1>
+                                        <h1 name="amounts" class="count" style="font-size: 20px; color: black">{{quantity}}</h1>
+                                    </div>
+                                    <div id="price_sum">
+                                        <h1 id="price_h1" style="font-size: 22px; color: black">총 금액:</h1>
+                                        <span id="my_sum" style="font-size: 20px">{{totalPrice}}</span>
+                                        <h1 id="price_h1" style="font-size: 20px; color: black">원</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </ul>
+                    {{/todayPurchaseHistory}}
+                </div>
+                <!-- 결제 금액 -->
+                <div id="total_price_box">
+                    <div id="total_price">
+                        <h1 id="price">총 결제 금액:</h1>
+                        <h1 id="price_number">{{totalAmount}}원</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="/js/paymentCompleted.js"></script>
+
+{{>layout/footer}}

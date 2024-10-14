@@ -1,0 +1,37 @@
+{{>layout/header}}
+
+    <section>
+        <div class="logo">
+            <h1>마이페이지</h1>
+        </div>
+        <div class="mini_menubar_1">
+            <div class="mini_menubar_2">
+                <ul class="mini">
+                    <li class="mini_li"><a href="/mypage" class="mini_li_a">QRcode</a></li>
+                    <li class="mini_li"><a href="/editMember" class="mini_li_a">회원정보 수정</a></li>
+                    <li class="mini_li"><a href="/tweetBook" class="mini_li_a">찜 목록</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="information">
+            <h1 class="info">QR code</h1>
+            <input type="hidden" id="username" value="{{userPrincipal.username}}">
+            <div class="QR">
+                <div class="img" id="qrCode">
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <script>
+        $(document).ready(function() {
+            var userId = $('#username').val(); // 사용자 ID를 가져옵니다.
+            console.log('userId = ' + userId);
+            var qrCodeUrl = "https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=" + userId; // QR 코드 이미지의 URL을 생성합니다.
+            console.log('qrCodeUrl = ' + qrCodeUrl);
+            $('#qrCode').html('<img src="' + qrCodeUrl + '" alt="User QR Code">'); // QR 코드를 페이지에 삽입합니다.
+        });
+    </script>
+{{>layout/footer}}

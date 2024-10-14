@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    <link rel="stylesheet" type="text/css" href="/css/searchList.css">
+    <link rel="stylesheet" type="text/css" href="/css/novel.css">
+    <link rel="stylesheet" type="text/css" href="/css/history_culture.css">
+    <link rel="stylesheet" type="text/css" href="/css/personalDevelopment.css">
+    <link rel="stylesheet" href="/css/noCart.css">
+    <link rel="stylesheet" href="/css/cart.css">
+    <link rel="stylesheet" href="/css/editMember.css">
+    <link rel="stylesheet" href="/css/showQR.css">
+    <link rel="stylesheet" href="/css/tweetBook.css">
+    <link rel="stylesheet" href="/css/paymentCompleted.css">
+    <link rel="stylesheet" href="/css/howToUse.css">
+    <link rel="stylesheet" href="/css/popup.css">
+    <link rel="stylesheet" href="/css/qna.css">
+    <link rel="stylesheet" href="/css/qna_detail.css">
+    <link rel="stylesheet" href="/css/qna_question.css">
+    <link rel="stylesheet" type="text/css" href="/css/header.css">
+    <link rel="stylesheet" type="text/css" href="/css/footer.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/8978c32416.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript" src="/js/index.js"></script>
+    <script type="text/javascript" src="/js/mypage_info.js"></script>
+</head>
+<body class="nanum-gothic-regular" style="margin: 0; padding: 0;">
+
+    <header>
+        <nav class="navbar">
+            <div class="navbar_Logo">
+                <i class="fa-solid fa-bars" id="icon"></i>
+            </div>
+            <div class="colorlogo">
+                <a href="/"><img src="/img/logo.png" id="img_colorlogo"></a>
+            </div>
+            {{#userPrincipal}}
+                <ul class="navbar_menu" id="nav_menu">
+                    <li id="nav_home"><a href="/" >HOME</a></li>
+                    <li><a href="/auth/book/novel" id="navbar_menu_a">도서목록</a></li>
+                    <li class="class_li"><a href="/auth/howToUse">이용방법</a></li>
+                    <li class="class_li"><a href="/auth/qna">QnA</a></li>
+                    <li><a href="/mypage">마이페이지</a></li>
+                </ul>
+                <div class="login">
+                    <div class="class_cart">
+                        <a href="/cart"><img src="/img/cart.png" id="img_cart"><p id="p_cart">장바구니</p></a>
+                    </div>
+                    <button class="login_button" id="login_btn" onclick="location.href='/auth/logout'">logout</button>
+                </div>
+            {{/userPrincipal}}
+            {{^userPrincipal}}
+                <ul class="navbar_menu" id="nav_menu">
+                    <li id="nav_home"><a href="/" >HOME</a></li>
+                    <li><a href="/auth/book/novel" id="navbar_menu_a">도서목록</a></li>
+                    <li class="class_li"><a href="/auth/howToUse">이용방법</a></li>
+                    <li class="class_li"><a href="/auth/qna">QnA</a></li>
+                </ul>
+                <div class="login">
+                    <button class="login_button" id="login_btn" onclick="location.href='login_joinForm'">login</button>
+                </div>
+            {{/userPrincipal}}
+        </nav>
+    </header>
+    <script type="text/javascript" src="/js/header.js"></script>

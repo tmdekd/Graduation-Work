@@ -1,0 +1,289 @@
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@media(min-width:280px) {
+    .nanum-gothic-regular {
+        font-family: 'GmarketSansMedium';
+        font-weight: 400;
+        font-style: normal;
+        justify-content: center;
+        background-color: #cdcd;
+    }
+
+
+
+
+    /*검색어 입력 placeholder부분*/
+    .improvement_top {
+        display: flex;
+        justify-content: center;
+        margin: 0px;
+        padding-top:60px;
+        padding-bottom: 50px;
+        background-color: #FDF5E6;
+    }
+
+    #improvement_title_search {
+        display: flex;
+        border: solid;
+        border-radius: 50px;
+        /*border-radius: 100px;*/
+        color: #000;
+        width: 70%;
+        height: 60px;
+        margin-top:15px;
+        background-color: white;
+        border-width: 1.8px;
+    }
+
+    .improvement_search{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #improvement_input_search {
+        border:none;
+        border-radius: 100px;
+        height: 45px;
+        width: 65%;
+        margin-left: 10px;
+        outline: none;
+    }
+
+    #improvement_div2_button {
+        background-color: white;
+        border: none;
+        float: right;
+        margin-right: 10px;
+    }
+
+    #improvement_button_img {
+        font-size: 16px;
+        margin:0 10px;
+    }
+
+
+
+
+
+
+
+    /* 중간 메뉴바 */
+    .improvement_mini{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #cdcd;
+        margin-bottom: 50px;
+        padding: 0;
+        height: 55px;
+    }
+
+    .improvement_mini_li{
+        list-style: none;
+        display: flex;
+        align-items: center;
+    }
+
+    .improvement_mini_li_a{
+        text-decoration: none;
+        padding: 0 10px;
+        color: black;
+        font-size: 16px;
+    }
+
+
+
+
+
+
+
+    /* 소설도서 부분 */
+    #improvement_one {
+        background-color: white;
+        display: flex;
+        justify-content: stretch;
+        border-top: solid #DDDBE1;;
+        margin: 15px;
+        height: 1200px;
+    }
+
+    #improvement_title {
+        margin: 0 10px;
+    }
+
+    #improvement_title_h1 {
+        margin-top: 8px;
+        font-size: 30px;
+        font-weight: 200;
+        text-align: left;
+    }
+
+    #improvement_title_h2 {
+        color: gray;
+        font-size: 20px;
+        font-weight: 60;
+        margin-top: 7px;
+        text-align: left;
+    }
+
+    /*첫번째도서  */
+    .improvement_book_list{
+        margin-top:25px;
+        margin-bottom: 7px;
+        padding: 10px;
+        background-color: #F5F7F8;
+        /*height: 250px;*/
+        width: 150px;
+        margin-top:30px;
+        margin-right: 20px;
+    }
+
+    .improvement_button_boxs{
+        display: flex;
+        justify-content: right;
+    }
+
+    .improvement_book_img {
+        width: 90px;
+        height: 120px;
+        margin-right: 5px;
+    }
+
+    .improvement_book_1 {
+        text-decoration: none;
+        color: #000;
+        font-size: 16px;
+    }
+
+    .improvement_book_2 {
+        font-size: 14px
+    }
+
+    .improvement_book_3{
+        margin:15px 0px;
+        font-size: 12px;
+    }
+
+    /*두번째도서  */
+    .improvement_book_list2{
+        margin-top:30px;
+        margin-bottom: 7px;
+        height: 240px;
+        width: 130px;
+        margin-right: 30px;
+    }
+
+    /* 세번째도서 */
+    .improvement_book_list3{
+        margin-top:30px;
+        margin-bottom: 7px;
+        height: 240px;
+        width: 130px;
+    }
+
+    .improvement_list_list{
+        background-color: #F5F7F8;
+        padding: 10px;
+        width: 120px;
+        height: 240px;
+    }
+
+    #improvement_list3_box {
+        margin-bottom: 5px;
+    }
+
+
+
+
+
+
+    /* 찜,장바구니 */
+    .improvement_heart{
+        padding:5px;
+        font-size: 12px;
+        background-color: white;
+        border: solid 1px #ccc;
+    }
+
+    .improvement_cart{
+        font-size: 12px;
+        background-color: white;
+        border: solid 1px #ccc;
+        padding: 5px;
+    }
+}
+
+
+
+
+
+
+@media(min-width:500px) {
+
+    /* 검색어입력 placeholder부분 */
+    #improvement_title_search{
+        width:60%
+    }
+
+
+
+    /* 소설도서 부분 */
+    .improvement_list_box{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #improvement_title h2{
+        font-size: 16px;
+    }
+}
+
+
+
+
+
+@media(min-width:700px) {
+
+    /* 검색어입력 placeholder부분 */
+    #improvement_title_search{
+        width:50%
+    }
+
+
+
+    /* 소설도서 부분 */
+    .improvement_list_box{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+
+
+
+
+@media(min-width:768px) {
+
+    /* 검색어입력 placeholder부분 */
+    #improvement_div2_button{
+        width: 10%;
+    }
+}
+
+
+
+
+@media(min-width:990px) {
+
+    /* 검색어입력 placeholder부분 */
+    #improvement_title_search{
+        width:45%
+    }
+}

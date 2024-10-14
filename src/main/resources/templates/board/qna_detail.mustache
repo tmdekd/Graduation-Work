@@ -1,0 +1,84 @@
+{{>layout/header}}
+    <section class="nanum-gothic">
+        <!-- Q&A -->
+        <div id="top_qna">
+            <h1 id="top_qna_h1">Q&A</h1>
+        </div>
+        <!-- title -->
+        <div id="answer_title">
+            <div id="title_background">
+                <h1 id="title_h1">{{question.title}}</h1>
+                <div id="id-day">
+                    <h1 id="user_id">{{question.member.name}}</h1>
+                    <h1 id="day_time">{{question.createdDate}}</h1>
+                    <!--                <h1 id="time"></h1>-->
+                </div>
+            </div>
+        </div>
+        <!-- content -->
+        <div id="question_content">
+            <div id="content_background">
+                <h1 id="content_h1">{{question.content}}</h1>
+            </div>
+        </div>
+        <!-- button -->
+        <div id="button_box">
+            <div id="answer_buttons">
+                {{#isUser}}
+                    <button type="button" id="rewrite" data-id="{{question.id}}">수정</button>
+                    <button type="button" id="delete" data-id="{{question.id}}">삭제</button>
+                {{/isUser}}
+                {{#isAuthor}}
+                    <button type="button" id="rewrite" data-id="{{question.id}}">수정</button>
+                    <button type="button" id="delete" data-id="{{question.id}}">삭제</button>
+                {{/isAuthor}}
+                <button type="button" onclick="location.href='/auth/qna'" id="golist">목록으로</button>
+            </div>
+        </div>
+
+
+        <div id="teduri">
+            <!-- answer -->
+        <div id="answer">
+            {{#isAuthor}}
+                <button id="manager_button">관리자</button>
+                <input type="text" id="answer_input" placeholder="댓글 작성하기 ">
+            </div>
+            <div id="write">
+                <div id="comment_button_box">
+                    <button type="submit" id="comment_button" data-id="{{question.id}}">댓글</button>
+                </div>
+            {{/isAuthor}}
+        </div>
+
+            {{#comment}}
+                <div id="comment_timeline">
+                    <h1 id="name_admin">{{member.name}}</h1>
+                    <h1 id="admin_comment_datetime">{{createdDate}}</h1>
+
+                </div>
+
+                <div id="comment_box">
+                    <div id="comment">
+                        <h1 id="comment_box_h1">{{content}}</h1>
+                    </div>
+                </div>
+
+
+                <!-- admin comment button -->
+                {{#isAuthor}}
+                    <div class="admin_comment_button">
+                        <button type="button" class="admin_delete" data-id="{{id}}">삭제</button>
+                    </div>
+                {{/isAuthor}}
+
+            {{/comment}}
+
+        </div>
+
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/js/qna_detail.js"></script>
+
+{{>layout/footer}}
