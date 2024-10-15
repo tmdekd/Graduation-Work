@@ -43,12 +43,12 @@
 ├── gradlew.bat
 └── settings.gradle
 ```
-<br><br>
+<br>
 
 ## 🛠️ 프로젝트 아키텍쳐
 
 ![그림1](https://github.com/user-attachments/assets/e7e005fa-5caf-4f9f-8637-d97405f01178)
-<br>
+<br><br>
 
 ## 🛒 사용법
 
