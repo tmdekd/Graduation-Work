@@ -63,8 +63,8 @@
 
 |Backend|Backend|Frontend|Hardware|
 |:---:|:---:|:---:|:---:|
-| ![](https://github.com/yewon-Noh.png?size=120) | ![](https://github.com/SeongHo-C.png?size=120) | ![](https://github.com/seunggi-coding.png?size=120) | ![](https://github.com/SeongHo-C.png?size=120) |
-|[노예원](https://github.com/yewon-Noh)|[이성호](https://github.com/SeongHo-C)|
+| ![](https://github.com/Hyewon-Kim.png?size=120) | ![](https://github.com/seunggi-coding.png?size=120) | ![](https://github.com/ahyeonbaek.png?size=120) | ![](https://github.com/2seonju.png?size=120) |
+|[김혜원](https://github.com/Hyewon-Kim)|[문승기](https://github.com/seunggi-coding)|[백아현](https://github.com/ahyeonbaek)|[이선주](https://github.com/2seonju)|
 
 - **김혜원** - 백엔드 개발자, 팀장
 - **문승기** - 백엔드 개발자
