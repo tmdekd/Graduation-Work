@@ -1,5 +1,4 @@
-# Graduation-Work
-# 무인서점 시스템
+# Graduation-Work - 무인서점 시스템
 
 ## 📕 프로젝트 개요
 
