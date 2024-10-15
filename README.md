@@ -61,9 +61,9 @@
 
 ## 💁‍♂️ 프로젝트 팀원
 
-|Backend|Frontend|
-|:---:|:---:|
-| ![](https://github.com/yewon-Noh.png?size=120) | ![](https://github.com/SeongHo-C.png?size=120) |
+|Backend|Backend|Frontend|Hardware|
+|:---:|:---:|:---:|:---:|
+| ![](https://github.com/yewon-Noh.png?size=120) | ![](https://github.com/SeongHo-C.png?size=120) | ![](https://github.com/seunggi-coding.png?size=120) | ![](https://github.com/SeongHo-C.png?size=120) |
 |[노예원](https://github.com/yewon-Noh)|[이성호](https://github.com/SeongHo-C)|
 
 - **김혜원** - 백엔드 개발자, 팀장
