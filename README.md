@@ -69,5 +69,5 @@
 
 |Backend, 팀장|Backend|Frontend|Hardware|
 |:---:|:---:|:---:|:---:|
-| ![](https://github.com/Hyewon-Kim.png?size=120) | ![](https://github.com/seunggi-coding.png?size=120) | ![](https://github.com/ahyeonbaek.png?size=120) | ![](https://github.com/2seonju.png?size=120) |
-|[김혜원](https://github.com/Hyewon-Kim)|[문승기](https://github.com/seunggi-coding)|[백아현](https://github.com/ahyeonbaek)|[이선주](https://github.com/2seonju)|
+| ![](https://github.com/Hyewon-Kim.png?size=120) | ![](https://github.com/tmdekd.png?size=120) | ![](https://github.com/ahyeonbaek.png?size=120) | ![](https://github.com/2seonju.png?size=120) |
+|[김혜원](https://github.com/Hyewon-Kim)|[문승기](https://github.com/tmdekd)|[백아현](https://github.com/ahyeonbaek)|[이선주](https://github.com/2seonju)|
